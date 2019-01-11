@@ -62,12 +62,13 @@ class MainForm extends React.Component {
                         values = {values}
                         /> 
             case 4: return <Success />
+            default: return;
         }
     }
     
     render(){
         return (
-            <div className="container mt-5">
+            <div className="container pt-5 w-50">
                 { this.renderBody() }
             </div>
         );

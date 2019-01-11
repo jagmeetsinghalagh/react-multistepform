@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './form'
 
 class PersonalDetails extends React.Component {
     
@@ -7,14 +8,15 @@ class PersonalDetails extends React.Component {
         const { values } = this.props;
 
         return (
-            <div className="card">
+            <div className="card" style={styles.card}>
                 <div className="m-3 text-center">
-                    <h1>PersonalDetails</h1>
+                    <h1 className="mb-3" style={styles.h1}>PersonalDetails</h1>
                     <form>
                         <div className="form-group">
-                            <label>Age</label>
+                            <label><h5 style={styles.text}>Age </h5></label>
                             <input 
                                 type="number"
+                                style={styles.customInput}
                                 name = "age"
                                 className = "form-control"
                                 placeholder="Age"
@@ -23,9 +25,10 @@ class PersonalDetails extends React.Component {
                             />
                         </div>
                         <div className="form-group">
-                            <label>City:</label>
+                            <label><h5 style={styles.text}>City </h5></label>
                             <input 
                                 type="text"
+                                style={styles.customInput}
                                 name = "city"
                                 className = "form-control"
                                 placeholder="city"
@@ -34,9 +37,10 @@ class PersonalDetails extends React.Component {
                             />
                         </div>
                         <div className="form-group">
-                            <label>Country:</label>
+                            <label><h5 style={styles.text}>Country </h5></label>
                             <input 
                                 type="text"
+                                style={styles.customInput}
                                 name = "country"
                                 className = "form-control"
                                 placeholder="Country"
@@ -46,10 +50,20 @@ class PersonalDetails extends React.Component {
                         </div>
                     </form>
 
-                    <button type="button" className="btn btn-primary" onClick = { this.props.nextStep }>
+                    <button 
+                        type="button" 
+                        style={styles.customButton} 
+                        className="btn btn-lg mt-4" 
+                        onClick = { this.props.nextStep }
+                    >
                         Save and continue
                     </button>
-                    <button type="button" className="btn btn-warning" onClick = { this.props.prevStep }>
+                    <button
+                        type="button" 
+                        style={styles.customButton2} 
+                        className="btn btn-lg mt-4 ml-3" 
+                        onClick = { this.props.prevStep }
+                    >
                         Go back
                     </button>
                 </div>
